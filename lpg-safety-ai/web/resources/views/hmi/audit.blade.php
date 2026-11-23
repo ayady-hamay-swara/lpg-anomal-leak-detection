@@ -1,0 +1,1 @@
+<x-app-layout><x-slot name="header"><h2>Audit log</h2></x-slot><div class="p-6"><div class="bg-white p-4 rounded">Every acknowledgement and play-ground action should be written to audit_log.</div></div></x-app-layout>

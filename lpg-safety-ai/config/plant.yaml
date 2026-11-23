@@ -1,0 +1,66 @@
+seed: 42
+product:
+  propane_fraction: 0.60 # PLACEHOLDER
+  rho_20_kg_m3: 530 # PLACEHOLDER
+  beta_per_c: 0.0027 # PLACEHOLDER
+  molar_mass: 50 # PLACEHOLDER
+  cp_kj_kg_k: 2.5
+  hvap_kj_kg: 350
+  k: 1.13
+weather:
+  t_mean_c: 30
+  t_amp_c: 12
+tanks:
+  - id: T01
+    volume_m3: 500 # PLACEHOLDER
+    design_pressure_barg: 17.5 # PLACEHOLDER
+    psv_set_barg: 17.5 # PLACEHOLDER
+    thermal_tau_hours: 6
+    solar_gain_c: 4 # PLACEHOLDER
+    level_h_pct: 80 # PLACEHOLDER
+    fill_limit_pct: 85
+  - id: T02
+    volume_m3: 500 # PLACEHOLDER
+    design_pressure_barg: 17.5 # PLACEHOLDER
+    psv_set_barg: 17.5 # PLACEHOLDER
+    thermal_tau_hours: 6
+    solar_gain_c: 4 # PLACEHOLDER
+    level_h_pct: 80 # PLACEHOLDER
+    fill_limit_pct: 85
+  - id: T03
+    volume_m3: 500 # PLACEHOLDER
+    design_pressure_barg: 17.5 # PLACEHOLDER
+    psv_set_barg: 17.5 # PLACEHOLDER
+    thermal_tau_hours: 6
+    solar_gain_c: 4 # PLACEHOLDER
+    level_h_pct: 80 # PLACEHOLDER
+    fill_limit_pct: 85
+pipeline:
+  segments:
+    - {id: S1, length_km: 3.0, diameter_mm: 150, flanges: 20, welds: 250}
+    - {id: S2, length_km: 3.0, diameter_mm: 150, flanges: 20, welds: 250}
+    - {id: S3, length_km: 3.0, diameter_mm: 150, flanges: 20, welds: 250}
+    - {id: S4, length_km: 3.0, diameter_mm: 150, flanges: 20, welds: 250}
+limits:
+  pressure_h_fraction: 0.75 # PLACEHOLDER
+  pressure_hh_fraction: 0.90 # PLACEHOLDER
+  gas_h_lel_pct: 20 # PLACEHOLDER
+  gas_hh_lel_pct: 40 # PLACEHOLDER
+  heat_warn_minutes_to_h: 120
+  heat_crit_minutes_to_hh: 45
+  heat_rise_c_per_hour: 1.5
+risk_weights:
+  pressure_margin: 25
+  level_margin: 20
+  heat: 15
+  leak: 25
+  anomaly: 5
+  maintenance: 5
+  sensor: 5
+alarms:
+  deadband_level_pct: 2
+  deadband_pressure_bar: 0.3
+  flood_count: 10
+  flood_window_min: 10
+  shelve_default_min: 60
+  shelve_max_min: 480

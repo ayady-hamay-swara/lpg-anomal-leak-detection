@@ -1,0 +1,1 @@
+<x-app-layout><x-slot name="header"><h2>Settings</h2></x-slot><div class="p-6"><div class="bg-white p-4 rounded">All thresholds remain in plant configuration. Confirmed 85% fill limit is used; all other limits are PLACEHOLDER.</div></div></x-app-layout>

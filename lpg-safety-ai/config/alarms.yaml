@@ -1,0 +1,99 @@
+alarms:
+  LEVEL_H:
+    kind: LEVEL_H
+    purpose: Warn that tank filling is approaching the hard fill limit.
+    consequence_if_ignored: "The tank may approach or exceed its 85% fill limit."
+    operator_action: "Check inflow and verify the fill status; advisory only."
+    response_time_min: 10
+    priority: MEDIUM
+  LEVEL_HH:
+    kind: LEVEL_HH
+    purpose: Protect against high tank fill level.
+    consequence_if_ignored: "A hot LPG tank may enter an overfill condition."
+    operator_action: "Stop filling now; verify inlet valve closed."
+    response_time_min: 5
+    priority: CRITICAL
+  PRESSURE_H:
+    kind: PRESSURE_H
+    purpose: Warn before pressure reaches the configured High limit.
+    consequence_if_ignored: "Pressure may approach the design pressure limit."
+    operator_action: "Check tank temperature, inflow and cooling availability."
+    response_time_min: 10
+    priority: HIGH
+  PRESSURE_HH:
+    kind: PRESSURE_HH
+    purpose: Warn before pressure reaches the High-High limit.
+    consequence_if_ignored: "Pressure safety exposure may increase."
+    operator_action: "Follow the site high-pressure procedure and call the supervisor."
+    response_time_min: 5
+    priority: CRITICAL
+  HEAT_WARN:
+    kind: HEAT_WARN
+    purpose: Warn on predicted temperature-driven pressure rise.
+    consequence_if_ignored: "The tank may reach a configured pressure limit."
+    operator_action: "Review fill level and the afternoon operating plan."
+    response_time_min: 30
+    priority: MEDIUM
+  HEAT_CRIT:
+    kind: HEAT_CRIT
+    purpose: Warn on critical heat-driven pressure or level risk.
+    consequence_if_ignored: "High pressure or overfill risk may develop quickly."
+    operator_action: "Reduce level or review cooling options per plant procedure."
+    response_time_min: 10
+    priority: HIGH
+  OVERFILL_RISK:
+    kind: OVERFILL_RISK
+    purpose: Warn that forecast heating may create an overfill risk.
+    consequence_if_ignored: "Liquid expansion may leave insufficient vapour space."
+    operator_action: "Lower tank level before the forecast heat peak."
+    response_time_min: 30
+    priority: HIGH
+  LEAK_TANK:
+    kind: LEAK_TANK
+    purpose: Identify possible tank-attached valve or pump-seal loss.
+    consequence_if_ignored: "An LPG leak may continue undetected."
+    operator_action: "Inspect valves, pump seals and nozzles; check gas detectors."
+    response_time_min: 5
+    priority: HIGH
+  LEAK_PIPE:
+    kind: LEAK_PIPE
+    purpose: Localize pipeline flow or pressure evidence.
+    consequence_if_ignored: "A flange, weld or pipe leak may worsen."
+    operator_action: "Inspect the indicated segment; isolate only under procedure."
+    response_time_min: 5
+    priority: HIGH
+  LEAK_RUPTURE:
+    kind: LEAK_RUPTURE
+    purpose: Detect a major sudden containment loss.
+    consequence_if_ignored: "A major LPG release could occur."
+    operator_action: "Use the emergency response procedure; advisory only."
+    response_time_min: 1
+    priority: CRITICAL
+  GAS_H:
+    kind: GAS_H
+    purpose: Detect combustible gas at warning concentration.
+    consequence_if_ignored: "Ignition exposure may increase."
+    operator_action: "Investigate the source and restrict ignition sources."
+    response_time_min: 5
+    priority: HIGH
+  GAS_HH:
+    kind: GAS_HH
+    purpose: Detect combustible gas at critical concentration.
+    consequence_if_ignored: "An immediate LPG hazard may exist."
+    operator_action: "Initiate emergency response per procedure."
+    response_time_min: 1
+    priority: CRITICAL
+  SENSOR_FAULT:
+    kind: SENSOR_FAULT
+    purpose: Identify invalid or suspect process measurements.
+    consequence_if_ignored: "AI confidence and process visibility may be reduced."
+    operator_action: "Verify the instrument; rely on the independent alarm systems."
+    response_time_min: 15
+    priority: MEDIUM
+  ANOMALY:
+    kind: ANOMALY
+    purpose: Flag a persistent unknown process anomaly.
+    consequence_if_ignored: "The condition may develop before conventional limits."
+    operator_action: "Review tank and pipeline trends."
+    response_time_min: 10
+    priority: LOW

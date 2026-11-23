@@ -1,0 +1,1 @@
+<x-app-layout><x-slot name="header"><h2>Assets and maintenance</h2></x-slot><div class="p-6"><div class="bg-white p-4 rounded">Asset register is populated from the Python simulator and annual-inspection data remains PLACEHOLDER.</div></div></x-app-layout>

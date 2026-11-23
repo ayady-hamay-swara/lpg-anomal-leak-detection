@@ -1,0 +1,1 @@
+<x-app-layout><x-slot name="header"><h2 class="font-semibold text-xl">Pipeline</h2></x-slot><div class="p-6"><div class="grid grid-cols-4 gap-3"><template></template><div class="bg-white p-4 rounded">S1</div><div class="bg-white p-4 rounded">S2</div><div class="bg-white p-4 rounded">S3</div><div class="bg-white p-4 rounded">S4</div></div></div></x-app-layout>
