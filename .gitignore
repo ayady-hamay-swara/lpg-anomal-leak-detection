@@ -46,3 +46,26 @@ dist/
 
 # web/ folder is NOT ignored - it will be tracked by git
 !web/
+
+# Ignore Composer dependencies inside web folder
+web/vendor/
+
+# Ignore Node.js dependencies inside web folder
+web/node_modules/
+
+# Ignore environment files inside web folder
+web/.env
+web/.env.local
+web/.env.production
+
+# Ignore Laravel storage folder inside web folder
+web/storage/
+
+# Ignore log files inside web folder
+web/storage/logs/*.log
+web/*.log
+
+# Ignore IDE folders inside web folder
+web/.vscode/
+web/.idea/
+
